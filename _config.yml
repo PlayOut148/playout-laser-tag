@@ -1,0 +1,32 @@
+title: PLAYOUT
+description: משחקי לייזר טאג ניידים לכל אירוע - יציאה מהמסך למשחק בעולם האמיתי
+baseurl: "/playout-laser-tag"
+url: "https://playout148.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+direction: rtl
+lang: he
+permalink: pretty
+
+# Social links
+social_links:
+  facebook: playout.lasertag
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /:collection/:name/
+
+# הגדרות נוספות
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
