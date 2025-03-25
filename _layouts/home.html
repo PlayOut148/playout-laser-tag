@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <h1>יציאה מהמסך למשחק בעולם האמיתי</h1>
+  <p>לייזר טאג נייד שמגיע אליכם - חוויית משחק מתקדמת לכל אירוע!</p>
+  <a href="{{ "/contact/" | relative_url }}" class="btn">הזמינו עכשיו</a>
+</div>
+
+<div class="home-content">
+  {{ content }}
+  
+  <h2>השירותים שלנו</h2>
+  <div class="services-container">
+    {% for service in site.services limit:3 %}
+      <div class="service-card">
+        {% if service.image %}
+          <img src="{{ service.image | relative_url }}" alt="{{ service.title }}">
+        {% endif %}
+        <div class="content">
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.excerpt }}</p>
+          <a href="{{ service.url | relative_url }}" class="btn">לפרטים נוספים</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="cta-section">
+    <h2>רוצים לדעת עוד?</h2>
+    <p>פנו אלינו עוד היום ונשמח לתת לכם את כל המידע שתצטרכו!</p>
+    <a href="{{ "/contact/" | relative_url }}" class="btn">צרו קשר</a>
+  </div>
+</div>
